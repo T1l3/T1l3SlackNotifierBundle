@@ -28,27 +28,5 @@ class T1l3SlackNotifierExtension extends Extension
 
         $container->setParameter('t1l3_slack_notifier.team', $config['team']);
         $container->setParameter('t1l3_slack_notifier.token', $config['token']);
-
-
-        // $container
-        //     ->setDefinition(
-        //         't1l3_slack_notifier_client',
-        //         new Definition(
-        //             '%slack_notifier.client.class%',
-        //             array('%t1l3_slack_notifier.team%', '%t1l3_slack_notifier.token%')
-        //         )
-        //     )
-        // ;
-
-        // $container
-        //     ->setDefinition(
-        //         't1l3_slack_notifier',
-        //         new Definition(
-        //             '%slack_notifier.notifier.class%',
-        //             array(new Reference('t1l3_slack_notifier_client'))
-        //         )
-        //     )
-        // ;
-
     }
 }
