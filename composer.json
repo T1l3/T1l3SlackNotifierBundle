@@ -10,5 +10,6 @@
             "name": "Thibault PIERRE",
             "email": "tib.pierre@gmail.com"
         }
-    ]
+    ],
+    "target-dir": "T1l3/SlackNotifierBundle",
 }
