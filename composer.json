@@ -1,6 +1,7 @@
 {
     "name": "t1l3/slack-notifier-bundle",
     "description": "A simple wrapper for Slack notifications",
+    "keywords": ["Slack"],
     "require": {
         "polem/slack-notifier": "0.2"
     },
@@ -12,7 +13,8 @@
         }
     ],
     "autoload": {
-        "psr-0": { "T1l3\\SlackNotifierBundle": "" }
-    },
-    "target-dir": "T1l3/SlackNotifierBundle"
+        "psr-4": {
+            "T1l3\\SlackNotifierBundle\\": ""
+        }
+    }
 }
