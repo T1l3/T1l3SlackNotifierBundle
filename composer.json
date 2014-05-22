@@ -11,5 +11,8 @@
             "email": "tib.pierre@gmail.com"
         }
     ],
-    "target-dir": "T1l3/SlackNotifierBundle",
+    "autoload": {
+        "psr-0": { "T1l3\\SlackNotifierBundle": "" }
+    },
+    "target-dir": "T1l3/SlackNotifierBundle"
 }
