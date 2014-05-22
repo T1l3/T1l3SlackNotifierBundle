@@ -1,4 +1,4 @@
-#T1l3SlackNotifier
+# T1l3SlackNotifierBundle
 
 A simple wrapper for [polem/slack-notifier][1] to send [Slack][2] notifications.
 

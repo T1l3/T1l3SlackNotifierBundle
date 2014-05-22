@@ -2,7 +2,7 @@
     "name": "t1l3/slack-notifier-bundle",
     "description": "A simple wrapper for Slack notifications",
     "require": {
-        "polem/slack-notifier": "0.2"
+        "polem/slack-notifier": "dev-master"
     },
     "license": "MIT",
     "authors": [
