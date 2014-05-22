@@ -10,12 +10,12 @@ Add T1l3SlackNotifier in your composer.json:
 
     {
         "require": {
-            "T1l3/slack-notifier": "0.1"
+            "t1l3/slack-notifier-bundle": "0.1"
         }
     }
 Now tell composer to download the bundle by running the command:
 
-    $ php composer.phar update T1l3/slack-notifier
+    $ php composer.phar update t1l3/slack-notifier-bundle
 
 ### Enable the bundle
 
