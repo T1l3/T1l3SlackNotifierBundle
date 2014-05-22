@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="slack_notifier.notifier.class">Slack\Notifier</parameter>
+        <parameter key="slack_notifier.client.class">Slack\Client</parameter>
+    </parameters>
+
+    <services>
+        <service id="t1l3_slack_notifier_client" class="%slack_notifier.client.class%">
+            <argument>%t1l3_slack_notifier.team%</argument>
+            <argument>%t1l3_slack_notifier.token%</argument>
+        </service>
+        <service id="t1l3_slack_notifier" class="%slack_notifier.notifier.class%">
+            <argument type="service" id="t1l3_slack_notifier_client"/>
+        </service>
+    </services>
+</container>

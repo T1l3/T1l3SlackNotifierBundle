@@ -1,0 +1,14 @@
+{
+    "name": "t1l3/slack-notifier-bundle",
+    "description": "A simple wrapper for Slack notifications",
+    "require": {
+        "polem/slack-notifier": "0.2"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Thibault PIERRE",
+            "email": "tib.pierre@gmail.com"
+        }
+    ]
+}
