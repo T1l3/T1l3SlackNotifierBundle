@@ -9,11 +9,11 @@ A simple wrapper for [polem/slack-notifier][1] to send [Slack][2] notifications.
 Add T1l3SlackNotifier in your composer.json:
 
 ```json
-    {
-        "require": {
-            "t1l3/slack-notifier-bundle": "0.1"
-        }
+{
+    "require": {
+        "t1l3/slack-notifier-bundle": "0.1"
     }
+}
 ```
 
 Now tell composer to download the bundle by running the command:
@@ -25,16 +25,16 @@ Now tell composer to download the bundle by running the command:
 Enable the bundle in the kernel:
 
 ```php
-    <?php
-    // app/AppKernel.php
+<?php
+// app/AppKernel.php
 
-    public function registerBundles()
-    {
-        $bundles = array(
-            // ...
-            new T1l3\SlackNotifierBundle\T1l3SlackNotifierBundle(),
-        );
-    }
+public function registerBundles()
+{
+    $bundles = array(
+        // ...
+        new T1l3\SlackNotifierBundle\T1l3SlackNotifierBundle(),
+    );
+}
 ```
 
 ### Configure T1l3SlackNotifier
@@ -45,10 +45,10 @@ You can also set default Bot name and icon in the Integration Settings part.
 Then add it to your config.yml
 
 ```yml
-    # app/config/config.yml
-    t1l3_slack_notifier:
-        team: yourteam
-        token: yOurT0ken
+# app/config/config.yml
+t1l3_slack_notifier:
+    team: yourteam
+    token: yOurT0ken
 ```
 
 ## Usage
@@ -58,29 +58,29 @@ You just have to call `t1l3_slack_notifier` service and add a `Slack\Message\Mes
 Here is a simple exemple of using it in a controller.
 
 ```php
-    <?php
+<?php
 
-    namespace Acme\DemoBundle\Controller;
+namespace Acme\DemoBundle\Controller;
 
-    // ...
-    use Slack\Message\Message;
+// ...
+use Slack\Message\Message;
 
-    class DefaultController extends Controller
+class DefaultController extends Controller
+{
+    public function indexAction()
     {
-        public function indexAction()
-        {
-            $message = new Message('Hello World!');
-            $message->setChannel('#your-chanel')
-            ->setIconEmoji(':princess:')
-            ->setUsername('Bot')
-            ;
+        $message = new Message('Hello World!');
+        $message->setChannel('#your-chanel')
+        ->setIconEmoji(':princess:')
+        ->setUsername('Bot')
+        ;
 
-            $slackNotifier = $this->get('t1l3_slack_notifier');
-            $slackNotifier->notify($message);
+        $slackNotifier = $this->get('t1l3_slack_notifier');
+        $slackNotifier->notify($message);
 
-            // ...
-        }
+        // ...
     }
+}
 ```
 
   [1]: https://github.com/polem/slack-notifier
