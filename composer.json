@@ -3,7 +3,7 @@
     "description": "A simple wrapper for Slack notifications",
     "keywords": ["Slack"],
     "require": {
-        "polem/slack-notifier": "0.*"
+        "polem/slack-notifier": "dev-master"
     },
     "license": "MIT",
     "authors": [
